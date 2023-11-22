@@ -9,8 +9,8 @@ tags:
     description: All the operations about flows
 paths:
   "/ping":
-    $ref: './health/index.yaml#/ping'
+    $ref: './health/ping.yaml'
   "/version":
     $ref: './health/index.yaml#/version'
   "/health":
-    $ref: './health/index.yaml#/health'
+    $ref: 'health/index.yaml#/health'

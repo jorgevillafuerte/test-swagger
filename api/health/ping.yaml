@@ -1,0 +1,13 @@
+get:
+  tags:
+    - Health
+  summary: Ping api
+  description: Ping api to know if is healthy
+  responses:
+    '200':
+      description: OK
+      content:
+        text/plain:
+          schema:
+            type: string
+            example: pong
