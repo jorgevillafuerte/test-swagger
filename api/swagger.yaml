@@ -12,5 +12,3 @@ paths:
     $ref: ping.yaml
   "/version":
     $ref: version.yaml
-  "/health":
-    $ref: health.yaml
