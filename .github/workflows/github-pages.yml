@@ -3,7 +3,7 @@ name: github-pages
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
@@ -11,11 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate Swagger UI
-        uses: Legion2/swagger-ui-action@v1.1.6
-        with:
-          output: swagger-ui
-          spec-file: api/swagger.yaml
+      - run: make cli
+      - run: make swagger
+      - name: Fix permissions
+        run: |
+          chmod -c -R +rX "_site/" | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v2
