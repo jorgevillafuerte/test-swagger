@@ -1,0 +1,12 @@
+get:
+  tags:
+    - Health
+  summary: Api Version
+  description: get the api version
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'models.yaml#/components/schemas/HealthResponse'

@@ -1,0 +1,13 @@
+get:
+  tags:
+    - Health
+  summary: Api Version
+  description: get the api version
+  responses:
+    '200':
+      description: OK
+      content:
+        text/plain:
+          schema:
+            type: string
+            example: v0.0.1
