@@ -1,0 +1,16 @@
+openapi: 3.0.3
+info:
+  title: commerce-integrations
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: Flow
+    description: All the operations about flows
+paths:
+  "/ping":
+    $ref: './health/index.yaml#/ping'
+  "/version":
+    $ref: './health/index.yaml#/version'
+  "/health":
+    $ref: './health/index.yaml#/health'
