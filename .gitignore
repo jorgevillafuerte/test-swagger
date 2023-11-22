@@ -1,0 +1,5 @@
+# build output
+dist
+docs/generated-code/**
+swagger-codegen-cli.jar
+_site/index.html

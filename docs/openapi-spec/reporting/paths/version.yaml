@@ -1,8 +1,11 @@
 get:
-  tags:
-    - Health
+  operationId: getVersion
   summary: Api Version
   description: get the api version
+
+  tags:
+    - Health
+
   responses:
     '200':
       description: OK
@@ -11,3 +14,6 @@ get:
           schema:
             type: string
             example: v0.0.1
+
+    '401':
+      description: Unauthorized

@@ -1,8 +1,11 @@
 get:
-  tags:
-    - Health
+  operationId: getPing
   summary: Ping api
   description: Ping api to know if is healthy
+
+  tags:
+    - Health
+
   responses:
     '200':
       description: OK
@@ -11,3 +14,6 @@ get:
           schema:
             type: string
             example: pong
+
+    '401':
+      description: Unauthorized

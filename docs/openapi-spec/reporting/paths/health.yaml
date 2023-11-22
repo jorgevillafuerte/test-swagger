@@ -1,0 +1,18 @@
+get:
+  operationId: getHealth
+  summary: Api Health
+  description: get the api version
+
+  tags:
+    - Health
+
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/HealthResponse.yaml
+
+    '401':
+      description: Unauthorized

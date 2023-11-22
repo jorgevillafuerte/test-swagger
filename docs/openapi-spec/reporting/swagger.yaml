@@ -1,0 +1,35 @@
+openapi: "3.0.3"
+
+info:
+  title: commerce-integrations
+  version: 0.0.1
+  license:
+    name: needs to be determined
+    url: "https://www.theodi.org/article/what-are-the-impacts-of-non-open-licences/"
+
+servers:
+  - url: http://localhost:8080
+
+security:
+  - JWT: []
+
+components:
+  schemas:
+    HealthResponse:
+      $ref: components/schemas/HealthResponse.yaml
+
+  securitySchemes:
+    JWT:
+      $ref: components/securitySchemes/JWT.yaml
+
+tags:
+  - name: Flow
+    description: All the operations about flows
+
+paths:
+  "/ping":
+    $ref: paths/ping.yaml
+  "/version":
+    $ref: paths/version.yaml
+  "/health":
+    $ref: paths/health.yaml
